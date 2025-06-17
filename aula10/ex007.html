@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body {
+            font: normal 18pt arial;
+        }
+
+        input {
+            width: 100px;
+            height: 20px;
+        }
+
+        div {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando alguns valores</h1>
+    <input type="number" name="tn1" id="tn1"> +
+    <input type="number" name="tn2" id="tn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado: </div>
+
+    <input type="number" name="tn3" id="tn3"> -
+    <input type="number" name="tn4" id="tn4">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="res2">Resultado: </div>
+
+    <input type="number" name="tn5" id="tn5"> x
+    <input type="number" name="tn6" id="tn6">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="res3">Resultado:</div>
+
+    <input type="number" name="tn7" id="tn7"> /
+    <input type="number" name="tn8" id="tn8">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res4">Resultado:</div>
+    <script>
+        function somar() {
+            let n1 = Number(window.document.getElementById('tn1').value)
+            let n2 = Number(window.document.getElementById('tn2').value)
+            let res = window.document.getElementById('res')
+            let add = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${add}</strong>`
+        }
+
+        function subtrair(){
+            let n3 = Number(window.document.getElementById('tn3').value)
+            let n4 = Number(window.document.getElementById('tn4').value)
+            let res2 = window.document.getElementById('res2')
+            let sub = n3 - n4
+            res2.innerHTML = `A subtração entre ${n3} e ${n4} resulta em: <strong>${sub}</strong>`
+        }
+
+        function multiplicar() {
+            let n5 = Number(window.document.getElementById('tn5').value)
+            let n6 = Number(window.document.getElementById('tn6').value)
+            let res3 = window.document.getElementById('res3')
+            let multi = n5 * n6 
+            res3.innerHTML = `A multiplicação entre ${n5} e ${n6} resulta em: <strong>${multi}</strong>`
+        }
+
+        function dividir() {
+            let n7 = Number(window.document.getElementById('tn7').value)
+            let n8 = Number(window.document.getElementById('tn8').value)
+            let res4 = window.document.getElementById('res4')
+            divisao = n7 / n8
+            res4.innerHTML = `A divisão entre ${n7} e ${n8} resulta em: <strong>${divisao}</strong>`
+        }
+    </script>
+</body>
+</html>
