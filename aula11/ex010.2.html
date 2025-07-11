@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checando Nacionalidade</title>
+</head>
+<body>
+    <h1>Vamos conferir sua Nacionalidade</h1>
+    Escreva aqui o seu país: <input type="text" name="pais" id="pais" required>
+    <input type="button" value="Enviar" onclick="check()" >
+    <div id="res"></div>
+
+    <script>
+        function check() {
+            let pais = window.document.getElementById('pais').value
+            let res = window.document.getElementById('res')
+            res.innerHTML = `<p>Você está morando em: <strong>${pais}</strong></p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += 'Você é <strong>Brasileiro!</strong>'
+            } else  {
+                res.innerHTML += 'Você é <strong>Estrangeiro!</strong>'
+            }
+        }
+    </script>
+</body>
+</html>
