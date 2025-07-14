@@ -1,0 +1,1 @@
+alert('Olá, bem-vindo ao identificador de horas!')
